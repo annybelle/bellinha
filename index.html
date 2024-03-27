@@ -1,14 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
- <head>
-  <meta charset="utf-8>
-   <meta name="viewport" content="width=device-width, initial-scale-1,0">
-  <title>annybelle cristina almeida de oliveira</title>
- </head>
- <body>
-  <img src="flordelotus.jpg" alt="uma flor de lotus rosa ">
-  <h1>quem eu sou</h1></h1>
-  <p>me chamo anny tenho 16 anos e sou uma canceriana de mão cheia, adoro estar na praia me sinto atraida pelo mar e pela natureza.</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width, incial-scale=1.0">
+    </head>
+<body>
+<h1>calculadora de bhaskara</h1>
+ <p>A fórmula de Bhaskara é utilizada para encontrar as raízes de uma equação quadrática. A fórmula é: x = (-b ± √(b² - 4ac)) / (2a), onde a, b e c são os coeficientes da equação quadrática ax² + bx + c = 0. So ter os valores de a, b e c, para calcular as raízes.</p>
+    <script> 
+        var a = Number(window.prompt("Digite valor de a"))
+        var b = Number(window.prompt("Digite valor de b"))
+        var c = Number(window.prompt("Digite valor de c"))
+        
+        var delta = b * b - 4 * a * c
+            window.alert("O valor de delta é: " + delta)
 
- </body>
+        var x1 = (-b + (delta ** 0.5) / (2 * a))
+        var x2 = (-b - (delta ** 0.5) / (2 * a))
+            window.alert("Os resultados são: " + x1 + " e " + x2)
+   </script>
+</body>
 </html>
