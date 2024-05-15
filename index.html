@@ -5,36 +5,27 @@
         <meta name="viewport"content="width=device-width, incial-scale=1.0">
     </head>
 <body>
-<h1>calculadora de bhaskara</h1>
- <p>A fórmula de Bhaskara é utilizada para encontrar as raízes de uma equação quadrática. A fórmula é: x = (-b ± √(b² - 4ac)) / (2a), onde a, b e c são os coeficientes da equação quadrática ax² + bx + c = 0. So ter os valores de a, b e c, para calcular as raízes.</p>
-<h2>exemplo</h2>
-    <p>equação quadrática: 2x² - 5x + 2 = 0.<br>
-Neste caso, temos:
-a = 2
-b = -5
-c = 2
-Substituindo esses valores na fórmula de Bhaskara, temos:
-x = (-(-5) ± √((-5)² - 4*2*2)) / (2*2)
-x = (5 ± √(25 - 16)) / 4
-x = (5 ± √9) / 4
-x1 = (5 + 3) / 4
-x1 = 8 / 4
-x1 = 2
-x2 = (5 - 3) / 4
-x2 = 2 / 4
-x2 = 0.5
-Portanto, as raízes da equação quadrática são x1 = 2 e x2 = 0.5.</p>
-    <script> 
-        var a = Number(window.prompt("Digite valor de a"))
-        var b = Number(window.prompt("Digite valor de b"))
-        var c = Number(window.prompt("Digite valor de c"))
-        
-        var delta = b * b - 4 * a * c
-            window.alert("O valor de delta é: " + delta)
+    <h1>Olá, mundo!</h1>
+    <p>resultado aqui</p>
+    <p> aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div id="area" onclick="clicar()" onmosaenter="entrar()" onmouseout="sair()">Clique Aqui</div>
+ <script>
+     var a = document.getElementById('area')
+     function clicar(){
+         a.innerText = 'clicou!';
+        }
 
-        var x1 = (-b + (delta ** 0.5) / (2 * a))
-        var x2 = (-b - (delta ** 0.5) / (2 * a))
-            window.alert("Os resultados são: " + x1 + " e " + x2)
-   </script>
+     var b = document.getElementById('area')
+     function entrar(){
+            a.innerText = 'Entrou!';
+            a.style.backgroundColor = 'green';
+        }
+     var c = document.ElementById('area')
+     function sair(){
+            a.innerText = 'Saiu!';
+            a.style.backgroundColor = '#ccc';
+        }
+     
+ </script>
 </body>
 </html>
