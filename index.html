@@ -1,45 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"content="width=device-width, incial-scale=1.0">
-    <style>
-        #area {
-            background-color: red;
-            color: pink;
-            font: Arial;
-            height: 100px;
-            width: 200px;
-            text-aling: center;
-            line-height: 100px;
-            border: trick groove yellow;
-            
-        }
-    </style>
-    </head>
+<html lang="pt">
+  <head>
+   <meta charset="UTF-8">
+   <title>Impar e par</title>
+  </head>
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>resultado aqui</p>
-    <p> aprendendo a usar o <strong>DOM</strong> em JS</p>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Clique Aqui</div>
- <script>
-     var a = document.getElementById('area')
-     function clicar(){
-         a.innerText = 'clicou!';
-         a.style.backgroundColor = '#8B0000';
-        }
+  <h1>Atividade</h1>
+  <p>Digite um valor, caso ele seja impar será somado 10, caso seja par será subtraido 10</p>
+<p>Digite um número:</p>
+<input type="text" id="numero">
+<button onclick="calcular()">Calcular</button>
+<p id="resultado"></p>
+</body>
+<script>
+function calcular() {
+    var valor = document.getElementById('numero').value;
+    valor = parseInt(valor);
 
-     var b = document.getElementById('area')
-     function entrar(){
-            a.innerText = 'Entrou!';
-            a.style.backgroundColor = '#3CB371';
+    if (valor) {
+      var resultado;
+        if (valor % 2 === 0) {
+            resultado = valor - 10;
+        } else {
+            resultado = valor + 10;
         }
-     var c = document.ElementById('area')
-     function sair(){
-            a.innerText = 'Saiu!';
-            a.style.backgroundColor = '#00CED1';
-        }
-     
- </script>        
+        document.getElementById('resultado').textContent = "O resultado é: " + resultado;
+    }
+}
+</script>
 </body>
 </html>
