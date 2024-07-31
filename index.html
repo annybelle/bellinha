@@ -1,32 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt">
-  <head>
-   <meta charset="UTF-8">
-   <title>Impar e par</title>
-  </head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome e Nacionalidade</title>
+</head>
 <body>
-  <h1>Atividade</h1>
-  <p>Digite um valor, caso ele seja impar será somado 10, caso seja par será subtraido 10</p>
-<p>Digite um número:</p>
-<input type="text" id="numero">
-<button onclick="calcular()">Calcular</button>
-<p id="resultado"></p>
-</body>
-<script>
-function calcular() {
-    var valor = document.getElementById('numero').value;
-    valor = parseInt(valor);
+    <h1>Nome e Nacionalidade</h1>
+    
+    <p>Qual a velocidade máxima da via?</p>
+    <input type="text" id="via">
+    <br>
+    
+    <p>Em que velocidade você passou no radar?</p>
+    <input type="text" id="velocidadeusuario">
+    <br>
+    
+    <button onclick="calcular()">Enviar</button>
+    
+    <p id="resultado"></p>
 
-    if (valor) {
-      var resultado;
-        if (valor % 2 === 0) {
-            resultado = valor - 10;
-        } else {
-            resultado = valor + 10;
+    <script>
+        function calcular() {
+            var via = parseFloat(document.getElementById('via').value.trim());
+            var velocidadeusuario = parseFloat(document.getElementById('velocidadeusuario').value.trim());
+            var resultadoDiv = document.getElementById('resultado');
+            
+            if (via && velocidadeusuario) {
+                var excesso = velocidadeusuario - via;
+                if (excesso > 0) {
+                    var percentualExcesso = (excesso / via) * 100;
+                    if (percentualExcesso <= 10) {
+                        resultadoDiv.innerHTML = "Você pagará R$100,00.";
+                    } else if (percentualExcesso <= 20) {
+                        resultadoDiv.innerHTML = "Você pagará R$200,00.";
+                    } else {
+                        resultadoDiv.innerHTML = "Você pagará R$300,00.";
+                    }
+                } else {
+                    resultadoDiv.innerHTML = "Você está dentro do limite de velocidade.";
+                }
+            }
         }
-        document.getElementById('resultado').textContent = "O resultado é: " + resultado;
-    }
-}
-</script>
+    </script>
 </body>
 </html>
