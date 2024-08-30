@@ -1,29 +1,46 @@
-function verificarDia() {
-    var dia = document.getElementById('dia').value.toLowerCase().trim();
-    var respostaDia = document.getElementById('respostaDia');
-
-    switch (dia) {
-        case "segunda":
-        case "segunda-feira":
-        case "terça":
-        case "terça-feira":
-        case "terca-feira":
-        case "terca":
-        case "quarta":
-        case "quarta-feira":
-        case "quinta":
-        case "quinta-feira":
-        case "sexta":
-        case "sexta-feira":
-            respostaDia.innerHTML = "É dia útil.";
-            break;
-        case "sábado":
-        case "sabado":
-        case "domingo":
-            respostaDia.innerHTML = "É fim de semana.";
-            break;
-        default:
-            respostaDia.innerHTML = "Dia inválido. Por favor, digite outro.";
-            break;
-    }
+#include <stdio.h>
+#include <conio.h>
+int main (void )
+{
+  int valor;
+  
+  printf ("Digite um valor de 1 a 7: ");
+  scanf("%d", &valor);
+  
+  switch ( valor )
+  {
+    case 1 :
+    printf ("Domingo\n");
+    break;
+    
+    case 2 :
+    printf ("Segunda\n");
+    break;
+    
+    case 3 :
+    printf ("Terça\n");
+    break;
+    
+    case 4 :
+    printf ("Quarta\n");
+    break;
+    
+    case 5 :
+    printf ("Quinta\n");
+    break;
+    
+    case 6 :
+    printf ("Sexta\n");
+    break;
+    
+    case 7 :
+    printf ("Sabado\n");
+    break;
+    
+    default :
+    printf ("Valor invalido!\n");
+  }
+  
+  getch();
+  return 0;
 }
