@@ -1,46 +1,31 @@
-#include <stdio.h>
-#include <conio.h>
-int main (void )
-{
-  int valor;
-  
-  printf ("Digite um valor de 1 a 7: ");
-  scanf("%d", &valor);
-  
-  switch ( valor )
-  {
-    case 1 :
-    printf ("Domingo\n");
-    break;
-    
-    case 2 :
-    printf ("Segunda\n");
-    break;
-    
-    case 3 :
-    printf ("Terça\n");
-    break;
-    
-    case 4 :
-    printf ("Quarta\n");
-    break;
-    
-    case 5 :
-    printf ("Quinta\n");
-    break;
-    
-    case 6 :
-    printf ("Sexta\n");
-    break;
-    
-    case 7 :
-    printf ("Sabado\n");
-    break;
-    
-    default :
-    printf ("Valor invalido!\n");
-  }
-  
-  getch();
-  return 0;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Atividade</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Contagem Regressiva</h1>
+    <p>Fale um número para a contagem regressiva:</p>
+    <input type="text" id="numeroRegressiva">
+    <button onclick="iniciarContagemRegressiva()">Enviar</button>
+    <p id="resultadoRegressiva"></p>
+    <br>
+    <h1>Tabuada</h1>
+    <p>Fale um número de 1 a 10:</p>
+    <input type="text" id="numeroTabuada">
+    <button onclick="mostrarTabuada()">Enviar</button>
+    <p id="resultadoTabuada"></p>
+    <br>
+    <h1>Adivinhe o Número</h1>
+    <p>Adivinhe o número de 1 a 10:</p>
+    <input type="text" id="numeroJogo">
+    <button onclick="adivinhar()">Enviar</button>
+    <button onclick="gerarNovoNumero()">Novo Número</button>
+    <p id="resultadoJogo"></p>
+    <br>
+
+    <script src="script.js"></script>
+</body>
+</html>
